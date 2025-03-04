@@ -2,19 +2,19 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fdf6f0;
+    background-color: #e3f2fd;
     color: #333;
-    background-image: url('lotus-background.jpg'); /* Add a soft lotus-themed background */
+    background-image: url('blue-lotus.jpg'); /* Add a blue lotus-themed background */
     background-size: cover;
     background-attachment: fixed;
 }
 
 header {
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    background: linear-gradient(to right, #1e3c72, #2a5298);
     color: white;
     text-align: center;
     padding: 30px;
-    border-bottom: 5px solid #b56576;
+    border-bottom: 5px solid #1258a7;
 }
 
 .profile-container {
@@ -40,14 +40,14 @@ section {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
 
 h2 {
-    color: #b56576;
-    border-bottom: 2px solid #b56576;
+    color: #1258a7;
+    border-bottom: 2px solid #1258a7;
     padding-bottom: 5px;
 }
 
@@ -63,7 +63,7 @@ ul li {
 footer {
     text-align: center;
     padding: 15px;
-    background: #b56576;
+    background: #1258a7;
     color: white;
     position: relative;
     bottom: 0;
