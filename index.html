@@ -150,6 +150,26 @@
             color: var(--secondary-color);
             font-style: italic;
         }
+
+        /* Projects */
+        .project {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--dark-bg);
+        }
+        
+        .project:last-child {
+            border-bottom: none;
+        }
+        
+        .project-title {
+            font-weight: bold;
+        }
+        
+        .project-date {
+            color: var(--secondary-color);
+            font-style: italic;
+        }
         
         /* Contact section */
         .contact-grid {
@@ -241,6 +261,7 @@
                 <li><a href="#expertise">Key Expertise</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#publications">Publications</a></li>
+                <li><a href="#publications">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#positions">Positions of Responsibility</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -291,7 +312,7 @@
         </section>
         
         <section id="publications">
-            <h2>Publications / Research</h2>
+            <h2>Publications</h2>
             <div class="publication">
                 <div class="publication-date">August, 2026</div>
                 <div class="publication-title">Deterministic Graph Summarization and Compression</div>
@@ -323,6 +344,21 @@
             </div>
         </section>
 
+        <section id="project">
+            <h2>Projects</h2>
+            <div class="project">
+                <div class="project-date">2025</div>
+                <div class="project-title">Paperbase</div>
+                <p>Research Paper | SCOPUS | Communication and Intelligent Systems</p>
+                <p>Designed and implemented a desktop application for managing research PDFs and generating bibliographies</p>
+                <p>Built using C++ and Qt 6, following LGPL-compliant dynamic linking</p>
+                <p>Implemented local-first data persistence using JSON (no cloud dependencies)</p>
+                <p>>Supported multiple citation formats: IEEE, APA, Springer, Chicago, MLA, BibTeX, LaTeX</p>
+                <p>Developed a Windows installer using NSIS</p>
+                <p>Focused on clean architecture, modular design, and UI/UX usability</p>
+            </div>
+        </section>
+        
         <section id="experience">
             <h2>Experience</h2>
                 <div class="timeline-item">
@@ -331,18 +367,6 @@
                     <p>EduSkills Foundation®</p>
                     <p> Android Developer Virtual Internship through EduSkills, under the AICTE Internship Program. Worked on Android application projects using Java, Android Studio, XML, and SQLite. Acquired practical experience in mobile UI/UX design, app architecture, and Git-based workflows.</p>
                 </div>
-        </section>
-        
-        <section id="positions">
-            <h2>Positions of Responsibility</h2>
-            <h3>Lead Researcher – Alternate Search Algorithm</h3>
-            <p>Proposed and developed an optimized search algorithm, conducting theoretical analysis and empirical testing in Python and MATLAB. Led the research framework, managed peer reviews, and refined performance metrics.</p>
-            
-            <h3>Research Analyst & Co-Author – Evolution and implications of the Internet of Things</h3>
-            <p>Conducted literature reviews on IoT architectures, security risks, and applications in smart cities and healthcare. Analyzed trends, proposed mitigation strategies, and contributed to structuring and drafting the research paper.</p>
-            
-            <h3>Software Developer</h3>
-            <p>Have experience in developing various software solutions.</p>
         </section>
         
         <section id="contact">
