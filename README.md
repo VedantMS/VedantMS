@@ -1,16 +1,58 @@
-## Hi there 👋
+# Hi there, I'm Vedant 👋
 
-<!--
-**VedantMS/VedantMS** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🎓 Computer Science student passionate about **algorithms, research, and intelligent systems**
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🧭 About Me
+
+I love working at the intersection of **mathematics, algorithms, and software systems**.
+My interests lie in:
+
+* 📊 Algorithm Design & Analysis
+* 🧩 Discrete Mathematics
+* 🌌 Graph Theory
+* 🤖 Intelligent & Adaptive Systems
+* ⚛️ Emerging areas like Quantum Computing
+
+I enjoy turning **deep theoretical ideas** into **practical, efficient implementations**.
+
+---
+
+## 🛠️ Tech & Tools
+
+**Languages**
+
+* C
+* C++
+* Python
+* Java
+
+**Core CS Areas**
+
+* Data Structures & Algorithms
+* Graph Theory
+* Complexity Analysis
+* Problem Solving
+
+---
+
+## 📈 Goals
+
+* Contribute to **impactful computer science research**
+* Publish work in **algorithmic and systems domains**
+* Build tools that bridge **theory and scalable applications**
+
+---
+
+## 🤝 Let’s Connect
+
+I’m always open to:
+
+* Research discussions
+* Algorithm brainstorming
+* Collaborative technical projects
+
+📫 Feel free to explore my repositories and reach out!
+
+---
