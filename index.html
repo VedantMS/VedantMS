@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vedant Manoj Salunke | CV</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Vedant Manoj Salunke - CV</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-dark: #020617;
-            --bg-card: rgba(30, 41, 59, 0.5);
-            --primary-blue: #3b82f6;
+            /* Palette: Dark Blue Base with Cobalt Highlights */
+            --dark-blue-base: #020d1f;
+            --navy-surface: #0a192f;
+            --cobalt-blue: #2563eb;
             --electric-blue: #60a5fa;
-            --cyan-glow: #22d3ee;
-            --text-white: #f8fafc;
+            --glass-border: rgba(37, 99, 235, 0.3);
+            --text-light: #f8fafc;
             --text-dim: #94a3b8;
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --neon-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
         }
 
         * {
@@ -29,84 +26,70 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: radial-gradient(circle at top right, #0f172a, #020617);
-            color: var(--text-white);
+            background-color: var(--dark-blue-base);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.2) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(37, 99, 235, 0.15) 0px, transparent 50%);
+            color: var(--text-light);
+            /* Times New Roman as requested */
+            font-family: 'Times New Roman', Times, serif;
             line-height: 1.6;
-            overflow-x: hidden;
         }
-
-        /* --- Custom Scrollbar --- */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--bg-dark); }
-        ::-webkit-scrollbar-thumb { background: var(--primary-blue); border-radius: 10px; }
 
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 25px;
         }
 
-        /* --- Header / Hero --- */
+        /* --- Header Section --- */
         header {
-            padding: 100px 0 60px;
-            position: relative;
-            perspective: 1000px;
+            padding: 80px 0 60px;
         }
 
         .header-content {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 50px;
-            background: var(--bg-card);
-            padding: 40px;
-            border-radius: 30px;
+            gap: 40px;
+            background: linear-gradient(145deg, #0a192f, #112240);
+            padding: 50px;
+            border-radius: 20px;
             border: 1px solid var(--glass-border);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
         }
 
-        .profile-photo {
-            position: relative;
-        }
+        .profile-info { flex: 1.5; }
+        
+        /* Photo to the Right */
+        .profile-photo { flex: 1; text-align: right; }
 
         .profile-photo img {
-            width: 200px;
-            height: 200px;
-            border-radius: 20px;
+            width: 250px;
+            height: 250px;
+            border-radius: 15px;
             object-fit: cover;
-            border: 2px solid var(--primary-blue);
-            box-shadow: var(--neon-shadow);
-            transform: rotateY(-10deg);
-            transition: 0.5s;
+            border: 3px solid var(--cobalt-blue);
+            box-shadow: 0 0 25px rgba(37, 99, 235, 0.4);
+            transition: transform 0.4s ease;
         }
 
         .profile-photo:hover img {
-            transform: rotateY(0deg) scale(1.05);
+            transform: scale(1.03);
+            border-color: var(--electric-blue);
         }
 
-        .profile-info h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 3rem;
-            background: linear-gradient(to right, #fff, var(--electric-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 5px;
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            color: #fff;
+            letter-spacing: -1px;
         }
 
         .tagline {
-            font-size: 1.2rem;
-            color: var(--cyan-glow);
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
-
-        .contact-fast {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            font-size: 0.9rem;
-            color: var(--text-dim);
+            font-size: 1.6rem;
+            color: var(--electric-blue);
+            margin-bottom: 25px;
         }
 
         /* --- Navigation --- */
@@ -114,20 +97,19 @@
             position: sticky;
             top: 20px;
             z-index: 1000;
-            margin-top: -30px;
             text-align: center;
+            margin-top: -30px;
         }
 
         nav ul {
             display: inline-flex;
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(15px);
-            padding: 8px 20px;
+            background: rgba(2, 13, 31, 0.95);
+            backdrop-filter: blur(12px);
+            padding: 10px 30px;
             border-radius: 50px;
             list-style: none;
-            gap: 5px;
+            gap: 10px;
             border: 1px solid var(--glass-border);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         nav ul li a {
@@ -135,184 +117,189 @@
             color: var(--text-dim);
             padding: 8px 15px;
             border-radius: 25px;
-            font-size: 0.85rem;
-            font-weight: 500;
+            font-size: 1.1rem;
             transition: 0.3s;
         }
 
         nav ul li a:hover, nav ul li a.active {
             color: white;
-            background: var(--primary-blue);
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+            background: var(--cobalt-blue);
         }
 
-        /* --- Section Styling --- */
+        /* --- Sections --- */
         section {
-            padding: 80px 0;
+            padding: 70px 0 20px;
         }
 
-        .section-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2rem;
-            margin-bottom: 40px;
+        h2 {
+            font-size: 2.3rem;
+            margin-bottom: 35px;
+            color: var(--electric-blue);
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 20px;
         }
 
-        .section-title::before {
+        h2::after {
             content: "";
-            width: 40px;
-            height: 4px;
-            background: var(--primary-blue);
-            border-radius: 2px;
+            height: 1px;
+            background: linear-gradient(to right, var(--cobalt-blue), transparent);
+            flex-grow: 1;
         }
 
-        /* --- 3D Card Effect --- */
-        .glass-card {
-            background: var(--bg-card);
+        .card {
+            background: var(--navy-surface);
             border: 1px solid var(--glass-border);
-            border-radius: 20px;
             padding: 30px;
+            border-radius: 12px;
             margin-bottom: 25px;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            transform-style: preserve-3d;
-        }
-
-        .glass-card:hover {
-            transform: translateY(-10px) rotateX(5deg);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(59, 130, 246, 0.1);
-            border-color: var(--primary-blue);
-        }
-
-        /* --- Skills --- */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .skill-node {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            color: var(--electric-blue);
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-weight: 500;
-            font-size: 0.9rem;
             transition: 0.3s;
         }
 
-        .skill-node:hover {
-            background: var(--primary-blue);
-            color: white;
-            transform: scale(1.1);
+        .card:hover {
+            border-color: var(--electric-blue);
+            background: #112240;
         }
 
-        /* --- Education & Experience Timeline --- */
-        .timeline {
-            border-left: 2px solid var(--primary-blue);
-            margin-left: 20px;
-            padding-left: 40px;
+        /* --- Skill Chips --- */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
+        .skill-chip {
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid var(--cobalt-blue);
+            color: var(--electric-blue);
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-size: 1.05rem;
+        }
+
+        /* --- Education/Experience --- */
         .timeline-item {
+            border-left: 3px solid var(--cobalt-blue);
+            margin-left: 10px;
+            padding-left: 30px;
             position: relative;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
         .timeline-item::before {
             content: "";
             position: absolute;
-            left: -51px;
+            left: -10px;
             top: 5px;
             width: 16px;
             height: 16px;
-            background: var(--bg-dark);
-            border: 3px solid var(--cyan-glow);
+            background: var(--cobalt-blue);
             border-radius: 50%;
-            box-shadow: 0 0 10px var(--cyan-glow);
+            box-shadow: 0 0 10px var(--cobalt-blue);
         }
 
-        .date-text {
-            color: var(--cyan-glow);
-            font-weight: 700;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-        }
-
-        /* --- Action Buttons --- */
-        .btn-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+        .date-badge {
             color: var(--electric-blue);
+            font-weight: bold;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* --- Contact Blocks --- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-card {
+            background: #112240;
+            border: 1px solid var(--glass-border);
+            padding: 25px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
             text-decoration: none;
-            margin-top: 15px;
-            font-weight: 600;
             transition: 0.3s;
         }
 
-        .btn-link:hover {
-            color: white;
-            text-shadow: 0 0 10px var(--primary-blue);
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--electric-blue);
+            background: #1d2d50;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .contact-card i {
+            font-size: 2.2rem;
+            color: var(--cobalt-blue);
+        }
+
+        .contact-card strong {
+            display: block;
+            color: #fff;
+            font-size: 1.25rem;
+        }
+
+        .contact-card span {
+            color: var(--text-dim);
+            font-size: 1rem;
         }
 
         .download-btn {
-            background: var(--primary-blue);
+            background: var(--cobalt-blue);
             color: white;
             padding: 12px 30px;
-            border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: var(--neon-shadow);
+            font-weight: bold;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 20px;
             transition: 0.3s;
         }
 
         .download-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px var(--primary-blue);
+            background: var(--electric-blue);
+            transform: translateY(-2px);
         }
 
-        /* --- Footer --- */
-        footer {
-            padding: 50px 0;
-            text-align: center;
-            border-top: 1px solid var(--glass-border);
-            color: var(--text-dim);
-            font-size: 0.9rem;
+        .link-text {
+            color: var(--electric-blue);
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        @media (max-width: 768px) {
-            .header-content { flex-direction: column; text-align: center; }
+        .link-text:hover { text-decoration: underline; }
+
+        @media (max-width: 850px) {
+            .header-content { flex-direction: column; text-align: center; padding: 30px; }
+            .profile-photo { text-align: center; order: -1; }
+            h1 { font-size: 2.8rem; }
             nav ul { flex-wrap: wrap; justify-content: center; border-radius: 20px; }
-            .profile-info h1 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <header id="home">
+        <header id="top">
             <div class="header-content">
-                <div class="profile-photo">
-                    <img src="profile.jpg" alt="Vedant Manoj Salunke">
-                </div>
                 <div class="profile-info">
                     <h1>Vedant Manoj Salunke</h1>
-                    <p class="tagline">B.Sc. Computer Science • Research Specialist</p>
-                    <div class="contact-fast">
-                        <span><i class="fa-solid fa-envelope"></i> vedantmanojsalunke@gmail.com</span>
-                        <span><i class="fa-solid fa-location-dot"></i> Pune, MH</span>
-                    </div>
-                    <div style="margin-top: 25px;">
-                        <a href="MyResume.pdf" class="download-btn" download>
-                            <i class="fa-solid fa-cloud-arrow-down"></i> Download Resume
-                        </a>
-                    </div>
+                    <p class="tagline">B.Sc. Computer Science • Research Enthusiast</p>
+                    <p style="color: var(--text-dim); margin-bottom: 20px;">
+                        Pune, Maharashtra, India - 411015<br>
+                        Research interest in Algorithm Design, Software Development, and Computer Science Theory.
+                    </p>
+                    <a href="MyResume.pdf" class="download-btn" download>
+                        <i class="fa-solid fa-file-pdf"></i> Download Resume
+                    </a>
+                </div>
+                <div class="profile-photo">
+                    <img src="profile.jpg" alt="Vedant Manoj Salunke">
                 </div>
             </div>
         </header>
@@ -320,130 +307,180 @@
 
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#expertise">Expertise</a></li>
-            <li><a href="#publications">Research</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#publications">Publications</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Exp</a></li>
-            <li><a href="#education">Edu</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <div class="container">
+        <!-- About -->
         <section id="about">
-            <h2 class="section-title">Academic Profile</h2>
-            <div class="glass-card">
-                <p>I am a Computer Science student driven by <strong>theoretical research and algorithmic efficiency</strong>. My work focuses on bridging advanced computational concepts with real-world mobile and web ecosystems. With a strong foundation in C++ and Python, I actively contribute to research in <strong>Graph Summarization</strong> and <strong>IoT ecosystems</strong>.</p>
+            <h2>About Me</h2>
+            <div class="card">
+                <p>I am a B.Sc. Computer Science student with a passion for research, algorithm design, and software development. I have published and indexed papers and am actively involved in developing innovative algorithms that contribute to the field.</p> 
+                <br>
+                <p>I am enthusiastic about opportunities ranging from theoretical research to practical software solutions. I enjoy collaborating on challenging projects and contributing to impactful innovations.</p>
             </div>
         </section>
 
+        <!-- Expertise -->
         <section id="expertise">
-            <h2 class="section-title">Core Expertise</h2>
-            <div class="skills-container">
-                <span class="skill-node">Algorithm Design</span>
-                <span class="skill-node">C++ / Python</span>
-                <span class="skill-node">Data Visualization</span>
-                <span class="skill-node">Android Development</span>
-                <span class="skill-node">LaTeX & Technical Writing</span>
-                <span class="skill-node">SQL / Data Analysis</span>
-                <span class="skill-node">Flutter / Dart</span>
-                <span class="skill-node">Experimental Design</span>
+            <h2>Key Expertise</h2>
+            <div class="skills-grid">
+                <span class="skill-chip">Programming Languages: C, C++, Python</span>
+                <span class="skill-chip">Data Analysis and Visualization: Excel, SQL, Matplotlib, Numpy</span>
+                <span class="skill-chip">Software Tools and Platforms: Git, Github, LaTeX</span>
+                <span class="skill-chip">Core Computer Science Concepts: Data Structures, Algorithm Design, Object Oriented Programming</span>
+                <span class="skill-chip">Research Skills: Experimental Design, Technical Writing</span>
+                <span class="skill-chip">Problem Solving</span>
+                <span class="skill-chip">Android Studio</span>
+                <span class="skill-chip">Android Development</span>
             </div>
         </section>
 
-        <section id="publications">
-            <h2 class="section-title">Publications</h2>
-            
-            <div class="glass-card">
-                <span class="date-text">August 2026</span>
-                <h3 style="margin: 10px 0;">Deterministic Graph Summarization and Compression</h3>
-                <p style="color: var(--text-dim);">7th Int. Conference on Communication & Intelligent Systems (ICCIS 2025)</p>
-                <p><small>SCOPUS Indexed | Mentor: Dr. Sunil Mahajan</small></p>
-            </div>
-
-            <div class="glass-card">
-                <span class="date-text">July 2025</span>
-                <h3 style="margin: 10px 0;">Assessing Rural Transformation - Book Chapter</h3>
-                <p style="color: var(--text-dim);">The Nexus of Ideas | 1st Edition | ISBN: 978-93-343-2248-4</p>
-                <a href="https://zenodo.org/records/15921401" class="btn-link" target="_blank">
-                    <i class="fa-solid fa-fingerprint"></i> View DOI: 10.5281/zenodo.15921401
-                </a>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2 class="section-title">Projects</h2>
-            <div class="glass-card">
-                <span class="date-text">2026</span>
-                <h3 style="margin: 10px 0;">Stella Caeli: Mobile Planetarium</h3>
-                <p>A mobile visualization engine for celestial bodies. Implemented real-time sky simulation using RA/Dec to Alt/Az transformations and Flutter sensor integration.</p>
-                <a href="https://github.com/vedantms/stella_caeli/" class="btn-link">
-                    <i class="fa-brands fa-github"></i> Source Code
-                </a>
-            </div>
-        </section>
-
-        <section id="experience">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="date-text">April 2025 - June 2025</span>
-                    <h3>Android Developer Intern</h3>
-                    <p style="color: var(--electric-blue);">EduSkills Foundation® (AICTE)</p>
-                    <p style="margin-top: 10px;">Worked on Java-based Android apps using SQLite and XML. Focused on responsive UI/UX and mobile system architecture.</p>
-                </div>
-            </div>
-        </section>
-
+        <!-- Education -->
         <section id="education">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="date-text">2023 - 2026</span>
-                    <h3>B.Sc. Computer Science</h3>
-                    <p>MIT Arts, Commerce & Science College, Alandi</p>
-                    <p style="color: var(--cyan-glow);">Current CGPA: 8.59 / 10</p>
-                </div>
-                <div class="timeline-item">
-                    <span class="date-text">2021</span>
-                    <h3>Prodigy Public School</h3>
-                    <p>10th Grade CBSE | A+ Grade</p>
-                </div>
+            <h2>Education</h2>
+            <div class="timeline-item">
+                <span class="date-badge">2023 - 2026</span>
+                <h3>MAEER's MIT Arts, Commerce & Science College, Alandi, Pune</h3>
+                <p>B.Sc. - Computer Science | CGPA: 8.59 / 10</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date-badge">2023</span>
+                <h3>SNBP, Yerawada, Pune</h3>
+                <p>12th | Grade: B</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date-badge">2021</span>
+                <h3>Prodigy Public School, Pune</h3>
+                <p>10th | CBSE | Grade: A+</p>
+            </div>
+        </section>
+
+        <!-- Publications -->
+        <section id="publications">
+            <h2>Publications</h2>
+            <div class="card">
+                <span class="date-badge">August, 2026</span>
+                <h3>Deterministic Graph Summarization and Compression</h3>
+                <p>Research Paper | SCOPUS | Communication and Intelligent Systems</p>
+                <p>7th International Conference on Communication and Intelligent Systems (ICCIS 2025)</p>
+                <p>Mentor: Dr Sunil Mahajan</p>
+            </div>
+
+            <div class="card">
+                <span class="date-badge">15 July, 2025</span>
+                <h3>ASSESSING RURAL TRANSFORMATION THROUGH SOCIO-ECONOMIC AND INFRASTRUCTURE DEVELOPMENT: A CASE STUDY OF VADGAON GHENAND UNDER UNNAT BHARAT ABHIYAN</h3>
+                <p>Book Chapter | The Nexus of Ideas | 1st Edition | 220-237</p> 
+                <p>Authors: Shriram N. Kargaonkar, Latpate Sandhya, Reetuja Deshpande, Rahul Barathe, Vedant Salunke</p>
+                <p>ISBN: 978-93-343-2248-4</p>
+                <p>DOI: <a href="https://zenodo.org/records/15921401" class="link-text">10.5281/zenodo.15921401</a></p>
+            </div>
+
+            <div class="card">
+                <span class="date-badge">04 Feb, 2025</span>
+                <h3>Design and Development of a Digital Platform for Peer-to-Peer Book Exchange</h3>
+                <p>Research Paper | International Journal of Advanced Research in Science, Communication and Technology</p>
+                <p>Mentor: Dr Sharmila More</p>
+                <p>DOI: <a href="https://ijarsct.co.in/Paper23205.pdf" class="link-text">10.48175/IJARSCT-23205</a></p>
+            </div>
+
+            <div class="card">
+                <span class="date-badge">28 Feb, 2024</span>
+                <h3>Evolution And Implications Of The Internet Of Things</h3>
+                <p>Research Paper | AVESHAN 2024</p> 
+                <p>Mentor: Dr Sunil Mahajan</p>
+                <p>DOI: <a href="https://doi.org/10.13140/RG.2.2.16409.39527" class="link-text" target="_blank">10.13140/RG.2.2.16409.39527</a></p>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="card">
+                <span class="date-badge">2026</span>
+                <h3>Stella Caeli: Mobile Planetarium & Constellation Visualization App</h3>
+                <p>Implemented real-time sky simulation using astronomical coordinate transformations (RA/Dec to Alt/Az). Developed a Flutter-based mobile application integrating device sensors, geolocation, and structured star catalog data for interactive constellation visualization.</p>
+                <br>
+                <a href="https://github.com/vedantms/stella_caeli/" class="link-text"><i class="fa-brands fa-github"></i> View Repository on GitHub</a>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="card">
+                <span class="date-badge">April, 2025 - June, 2025</span>
+                <h3>Android Developer Intern</h3>
+                <p><strong>EduSkills Foundation®</strong></p>
+                <p>Android Developer Virtual Internship through EduSkills, under the AICTE Internship Program. Worked on Android application projects using Java, Android Studio, XML, and SQLite. Acquired practical experience in mobile UI/UX design, app architecture, and Git-based workflows.</p>
+            </div>
+        </section>
+
+        <!-- Contact Blocks -->
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <div class="contact-grid">
+                <a href="mailto:vedantmanojsalunke@gmail.com" class="contact-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>Personal Email</strong>
+                        <span>vedantmanojsalunke@gmail.com</span>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BxmWntUBGQhCq5uwYI2y6HQ%3D%3D" target="_blank" class="contact-card">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <div>
+                        <strong>LinkedIn</strong>
+                        <span>Professional Profile</span>
+                    </div>
+                </a>
+                <a href="https://scholar.google.com/citations?hl=en&user=ffXxv1EAAAAJ" target="_blank" class="contact-card">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <div>
+                        <strong>Google Scholar</strong>
+                        <span>Research Citations</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="card" style="margin-top: 25px;">
+                <p><strong>Institutional Email:</strong> vedantmanojsalunke@mitacsc.edu.in</p>
+                <p><strong>Location:</strong> Pune, Maharashtra, India - 411015</p>
             </div>
         </section>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Vedant Manoj Salunke. Designed with Cyber-Blue Aesthetic.</p>
-        <div style="margin-top: 15px; font-size: 1.5rem;">
-            <a href="https://scholar.google.com/citations?user=ffXxv1EAAAAJ" target="_blank" style="color: var(--primary-blue); margin: 0 10px;"><i class="fa-solid fa-graduation-cap"></i></a>
-            <a href="#" style="color: var(--primary-blue); margin: 0 10px;"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:vedantmanojsalunke@gmail.com" style="color: var(--primary-blue); margin: 0 10px;"><i class="fa-solid fa-envelope"></i></a>
-        </div>
+    <footer style="text-align: center; padding: 60px 0; border-top: 1px solid var(--glass-border); color: var(--text-dim);">
+        <p>&copy; 2025 Vedant Manoj Salunke. Academic Portfolio.</p>
     </footer>
 
     <script>
-        // Highlighting active nav links
         const sections = document.querySelectorAll('section, header');
         const navLinks = document.querySelectorAll('nav ul li a');
-
-        window.onscroll = () => {
-            let current = "";
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 250) {
-                    current = section.getAttribute("id");
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
                 }
             });
-
+            
             navLinks.forEach(link => {
-                link.classList.remove("active");
-                if (link.getAttribute("href").includes(current)) {
-                    link.classList.add("active");
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
                 }
             });
-        };
+        });
     </script>
 </body>
 </html>
