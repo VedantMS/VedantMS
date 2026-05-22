@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedant Manoj Salunke | CV</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #020617;
+            --bg-card: rgba(30, 41, 59, 0.5);
+            --primary-blue: #3b82f6;
+            --electric-blue: #60a5fa;
+            --cyan-glow: #22d3ee;
+            --text-white: #f8fafc;
+            --text-dim: #94a3b8;
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --neon-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top right, #0f172a, #020617);
+            color: var(--text-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Custom Scrollbar --- */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--primary-blue); border-radius: 10px; }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header / Hero --- */
+        header {
+            padding: 100px 0 60px;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .profile-photo {
+            position: relative;
+        }
+
+        .profile-photo img {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 2px solid var(--primary-blue);
+            box-shadow: var(--neon-shadow);
+            transform: rotateY(-10deg);
+            transition: 0.5s;
+        }
+
+        .profile-photo:hover img {
+            transform: rotateY(0deg) scale(1.05);
+        }
+
+        .profile-info h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            background: linear-gradient(to right, #fff, var(--electric-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--cyan-glow);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .contact-fast {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+        }
+
+        /* --- Navigation --- */
+        nav {
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
+            margin-top: -30px;
+            text-align: center;
+        }
+
+        nav ul {
+            display: inline-flex;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(15px);
+            padding: 8px 20px;
+            border-radius: 50px;
+            list-style: none;
+            gap: 5px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dim);
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: white;
+            background: var(--primary-blue);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+        }
+
+        /* --- Section Styling --- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 40px;
+            height: 4px;
+            background: var(--primary-blue);
+            border-radius: 2px;
+        }
+
+        /* --- 3D Card Effect --- */
+        .glass-card {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            transform-style: preserve-3d;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(59, 130, 246, 0.1);
+            border-color: var(--primary-blue);
+        }
+
+        /* --- Skills --- */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-node {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: var(--electric-blue);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .skill-node:hover {
+            background: var(--primary-blue);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* --- Education & Experience Timeline --- */
+        .timeline {
+            border-left: 2px solid var(--primary-blue);
+            margin-left: 20px;
+            padding-left: 40px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -51px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: var(--bg-dark);
+            border: 3px solid var(--cyan-glow);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--cyan-glow);
+        }
+
+        .date-text {
+            color: var(--cyan-glow);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        /* --- Action Buttons --- */
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--electric-blue);
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-link:hover {
+            color: white;
+            text-shadow: 0 0 10px var(--primary-blue);
+        }
+
+        .download-btn {
+            background: var(--primary-blue);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: var(--neon-shadow);
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px var(--primary-blue);
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 50px 0;
+            text-align: center;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; text-align: center; }
+            nav ul { flex-wrap: wrap; justify-content: center; border-radius: 20px; }
+            .profile-info h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header id="home">
+            <div class="header-content">
+                <div class="profile-photo">
+                    <img src="profile.jpg" alt="Vedant Manoj Salunke">
+                </div>
+                <div class="profile-info">
+                    <h1>Vedant Manoj Salunke</h1>
+                    <p class="tagline">B.Sc. Computer Science • Research Specialist</p>
+                    <div class="contact-fast">
+                        <span><i class="fa-solid fa-envelope"></i> vedantmanojsalunke@gmail.com</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Pune, MH</span>
+                    </div>
+                    <div style="margin-top: 25px;">
+                        <a href="MyResume.pdf" class="download-btn" download>
+                            <i class="fa-solid fa-cloud-arrow-down"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#publications">Research</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Exp</a></li>
+            <li><a href="#education">Edu</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2 class="section-title">Academic Profile</h2>
+            <div class="glass-card">
+                <p>I am a Computer Science student driven by <strong>theoretical research and algorithmic efficiency</strong>. My work focuses on bridging advanced computational concepts with real-world mobile and web ecosystems. With a strong foundation in C++ and Python, I actively contribute to research in <strong>Graph Summarization</strong> and <strong>IoT ecosystems</strong>.</p>
+            </div>
+        </section>
+
+        <section id="expertise">
+            <h2 class="section-title">Core Expertise</h2>
+            <div class="skills-container">
+                <span class="skill-node">Algorithm Design</span>
+                <span class="skill-node">C++ / Python</span>
+                <span class="skill-node">Data Visualization</span>
+                <span class="skill-node">Android Development</span>
+                <span class="skill-node">LaTeX & Technical Writing</span>
+                <span class="skill-node">SQL / Data Analysis</span>
+                <span class="skill-node">Flutter / Dart</span>
+                <span class="skill-node">Experimental Design</span>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2 class="section-title">Publications</h2>
+            
+            <div class="glass-card">
+                <span class="date-text">August 2026</span>
+                <h3 style="margin: 10px 0;">Deterministic Graph Summarization and Compression</h3>
+                <p style="color: var(--text-dim);">7th Int. Conference on Communication & Intelligent Systems (ICCIS 2025)</p>
+                <p><small>SCOPUS Indexed | Mentor: Dr. Sunil Mahajan</small></p>
+            </div>
+
+            <div class="glass-card">
+                <span class="date-text">July 2025</span>
+                <h3 style="margin: 10px 0;">Assessing Rural Transformation - Book Chapter</h3>
+                <p style="color: var(--text-dim);">The Nexus of Ideas | 1st Edition | ISBN: 978-93-343-2248-4</p>
+                <a href="https://zenodo.org/records/15921401" class="btn-link" target="_blank">
+                    <i class="fa-solid fa-fingerprint"></i> View DOI: 10.5281/zenodo.15921401
+                </a>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="glass-card">
+                <span class="date-text">2026</span>
+                <h3 style="margin: 10px 0;">Stella Caeli: Mobile Planetarium</h3>
+                <p>A mobile visualization engine for celestial bodies. Implemented real-time sky simulation using RA/Dec to Alt/Az transformations and Flutter sensor integration.</p>
+                <a href="https://github.com/vedantms/stella_caeli/" class="btn-link">
+                    <i class="fa-brands fa-github"></i> Source Code
+                </a>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="date-text">April 2025 - June 2025</span>
+                    <h3>Android Developer Intern</h3>
+                    <p style="color: var(--electric-blue);">EduSkills Foundation® (AICTE)</p>
+                    <p style="margin-top: 10px;">Worked on Java-based Android apps using SQLite and XML. Focused on responsive UI/UX and mobile system architecture.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="date-text">2023 - 2026</span>
+                    <h3>B.Sc. Computer Science</h3>
+                    <p>MIT Arts, Commerce & Science College, Alandi</p>
+                    <p style="color: var(--cyan-glow);">Current CGPA: 8.59 / 10</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="date-text">2021</span>
+                    <h3>Prodigy Public School</h3>
+                    <p>10th Grade CBSE | A+ Grade</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Vedant Manoj Salunke. Designed with Cyber-Blue Aesthetic.</p>
+        <div style="margin-top: 15px; font-size: 1.5rem;">
+            <a href="https://scholar.google.com/citations?user=ffXxv1EAAAAJ" target="_blank" style="color: var(--primary-blue); margin: 0 10px;"><i class="fa-solid fa-graduation-cap"></i></a>
+            <a href="#" style="color: var(--primary-blue); margin: 0 10px;"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:vedantmanojsalunke@gmail.com" style="color: var(--primary-blue); margin: 0 10px;"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Highlighting active nav links
+        const sections = document.querySelectorAll('section, header');
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        window.onscroll = () => {
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 250) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("active");
+                }
+            });
+        };
+    </script>
+</body>
+</html>
